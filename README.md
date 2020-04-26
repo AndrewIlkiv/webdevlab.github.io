@@ -1,6 +1,6 @@
 # webdevlab
 
-## Don't be afraid to check this out
+## https://andrewilkiv.github.io/webdevlab/
 
 
-My labs for university subject "Web"
+Link is located above this text !!!
