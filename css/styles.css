@@ -107,5 +107,6 @@ p.header-word{
 
 ​.img-style {
     float:right;
-    height:auto;
+    height:50%;
+    width: 50%;
 }
