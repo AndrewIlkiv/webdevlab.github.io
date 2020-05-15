@@ -1,85 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Photo Atelier</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<body class="w3-light-grey">
 
-<head>
-    <title>Photo Atelier</title>
-     <!-- Required meta tags always come first -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta http-equiv="x-ua-compatible" content="ie=edge">
-     <link rel = "stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
-</head>
-
-<body>
-
-      <div class="row-header">
-        <nav class="my-navbar navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="./about.html">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </nav>
-      </div>
-        
-        <div class="row-content"> 
-          <h1 class="header-word">My Photo <span class="span-word">Atelier</span></h1>
-          <h6 class="header-word">Best photo can be found on Internet</h6>
-         </div>
-
-        <div class="bg col-12 col-sm-12">
-          <div class="blur">
-            <div class="content col-12">
-              <div class="text-mask">
-                <h1 class="header-word">We serve various type of photography</h1>
-                <div class="showcase">
-                  <div class="col-6"><img src = "css/img/9fa58151972bb63a9bb1d5f3a723dd26.jpg" width="400px"></div>
-                  <div class="col-6"><p class="header-word content-center">“In photography there is a reality so subtle that it becomes more real than reality.”</p></div>
-                </div>
+<nav class="my-navbar navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="w3-bar w3-dark w3-hide-small">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
               </div>
-            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </div>
-        
-        <div class="content-filler">
-          <div class="content-columns col-6">
-             <h1 class="header-word">Best photo of March</h1>
-             <p class="small-text">22.03.2020, ph. Entity File</p>
-             <img class="img-style" height = "300px" src="css/img/IMG_20190725_172424.jpg">
-            </div>
-          <div class="content-columns col-5">
-            <h1 class="header-word">Koldunu</h1>
-          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+<div class="w3-content" style="max-width:1600px">
+
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>ANDREW'S ATELIER</b></h1>
+    <h6>The biggest shame of my<span class="w3-tag">entire life</span></h6>
+  </header>
+
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image image-blur" src="/css/img/fotoapparat-photocamera.jpg" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">Photo Atelier</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>by Andrew Ilkiv</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
+    </div>
+  </header>
+
+  <div class="w3-row w3-padding w3-border">
+
+    <div class="w3-col l8 s12">
+    
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>My Bad Trip Story</h3>
+          <h5>Some photo, <span class="w3-opacity">May 9, 1945</span></h5>
         </div>
 
-        
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        
+        <div class="w3-justify">
+          <img src="css/img/IMG_20190701_170112.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16">
+          <p> “I don’t trust words. I trust pictures.”<strong>– Gilles Peress</strong>  
+        </div>
+      </div>
+      <hr>
+
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Girls are strange</h3>
+          <h5>And some other boring quotes, <span class="w3-opacity">Like june, 1337</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="/css/img/9fa58151972bb63a9bb1d5f3a723dd26.jpg" alt="Men in Hats" style="width:100%" class="w3-padding-16">
+          <p> “How do we start taking pictures of people, and stop taking pictures of poses?”<strong>– Justin and Mary Marantz</strong>
+            </p>
+          </div>
+      </div>
+
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>New cameraman</h3>
+          <h5>Our new photographer first photoshoot, <span class="w3-opacity">March 15, 2020</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="/css/img/unnamed.jpg" alt="Runway" style="width:100%" class="w3-padding-16">
+          <p><strong>And he is good</strong> Wherever the center of the light source is, you want that to be a little bit above the center of the couple’s eyes – something magical happens when you do this </p>
+         </div>
+      </div>
+      
+    </div>
+
+    <div class="w3-col l4">>
+      <div class="w3-white w3-margin">
+        <img src="/css/img/elon-musk-joe-rogan.png" alt="Jane" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Who am I?</h4>
+          <p>PUSSY DESTROYER</p>
+        </div>
+      </div>
+      <hr>
+      <hr>
+
+      <div class="w3-white w3-margin">
+          <a href="https://kachmaryk.github.io/WebDevelop/">
+        <div class="w3-container w3-padding w3-black">
+        </div>
+        <div class="w3-container w3-white">
+            <p>Some cool japanese stuff (AD)</p>
+          <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+            <img src="/css/img/photo_2020-05-15_14-23-59.jpg" style="width: 100%; height: 100%;">
+          </div>
+        </div>
+    </a>
+      </div>
+      <hr>
+
+
+
+
+<footer class="w3-container w3-dark fixed-bottom" style="padding:5px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
 
 </body>
-
 </html>
