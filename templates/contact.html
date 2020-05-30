@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block mainpage %}
+    <div class="w3-container">
+      <form action="action_page.php">
+    
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Ukraine</option>
+          <option value="canada">Polska</option>
+          <option value="usa">KEKWait</option>
+        </select>
+    
+        <label for="subject">What's on your mind?</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit" class="w3-button" style="background-color: rgb(73, 71, 71);">
+    
+      </form>
+    </div>
+{% endblock %}
