@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block mainpage %}
+      <div class="w3-container">
+      <h1>Login</h1>
+      <form method="POST">
+          {% csrf_token %}
+          {{ form }}
+          <input type="submit" />
+      </form>
+      </div>
+{% endblock %}

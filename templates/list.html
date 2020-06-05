@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block mainpage %}
+
+    <div class="col-8 mt-5">
+        <form class="form-inline justify-content-center" id="createOrder" method="post" data-url="{% url 'order_list' %}">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="mx-3"> {{ field }} </div>
+            {% endfor %}
+            <button type="button" class="btn btn-outline-success" id="createButton">create</button>
+        </form>
+    </div>
+
+    <div class="col-5 mt-5 justify-content-center" id='order-list' >
+        {% for order in orders %}
+        <div class="card mb-1" id='order-card' data-id="{{ order.id }}">
+            <div class="card-body " >
+                {{ order.title }}
+                <button type="button" class="close float-right" data-id="{{ order.id }}">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

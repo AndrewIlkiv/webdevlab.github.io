@@ -1,24 +1,39 @@
 {% extends 'index.html' %}
+
 {% block mainpage %}
-    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
-      <div class="w3-content">
-      
-        <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">List of Services</h1>
-    
-        <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-          <h1><b>Solo photoshoot</b> <button class="w3-button w3-white w3-large w3-opacity w3-hover-opacity-off" style="margin-left: 800px;"><span class="w3-right w3-tag w3-dark-grey w3-round" style="font-size: 30px;">$170</span></button></h1>
-          <p class="w3-text-grey">Standart photoshoot for your instagram profile</p>
-          <hr>
-       
-          <h1><b>Wedding memories</b> <button class="w3-button w3-white w3-large w3-opacity w3-hover-opacity-off" style="margin-left: 800px;"><span class="w3-right w3-tag w3-dark-grey w3-round" style="font-size: 30px;">$1500</span></button></h1>
-          <p class="w3-text-grey">Typical video + photo escort durin whole day</p>
-          <hr>
-          
-          <h1><b>Baby service</b> <button class="w3-button w3-white w3-large w3-opacity w3-hover-opacity-off" style="margin-left: 800px;"><span class="w3-right w3-tag w3-dark-grey w3-round" style="font-size: 30px;">$500</span></button></h1>
-          <p class="w3-text-grey">Careful photoshoot for your children</p>
-          <hr>
-    
-          <h1><b>Photoshop services</b> <button class="w3-button w3-white w3-large w3-opacity w3-hover-opacity-off" style="margin-left: 800px;"><span class="w3-right w3-tag w3-dark-grey w3-round" style="font-size: 30px;">$25</span></button></h1>
-          <p class="w3-text-grey">If you want to add some style to photo</p>
+<div class="contact-container">
+    <div class="form-block">
+        <div class="header-main"><div class="line-div"></div><h1 style="font-family: 'Raleway', sans-serif; font-size:20px ">Create your order</h1><div class="line-div"></div></div>
+        <form class="form-inline justify-content-center" id="createOrder" method="post" data-url="{% url 'order_list' %}">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="input-box" style="margin-right:25px;">
+                   <p style="color: white; font-weight: 600; font-size: 15px">{{ field.name }}</p>
+                <div class="mx-3"> {{ field }} </div>
+                </div>
+            {% endfor %}
+            <button type="button" class="btn btn-outline-success" id="createButton">create</button>
+        </form>
+    </div>
+
+    <div class="order-div" id='order-list' >
+        {% for order in orders %}
+        <div class="order-card" id='order-card' data-id="{{ order.id }}">
+            <div class="order-card-body" >
+                <button type="button" class="close float-right"  data-id="{{ order.id }}">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="upper-card-body">
+                <div class="mini-card"><div class="micro-card"><p class="pezda">Title</p></div><div class="micro-content"><p class="big-pezda">{{ order.title }}</p></div></div>
+                    <div class="horizontal-line"></div>
+                <div class="mini-card" style="width: 38%"><div class="micro-card" style="background-color: #FFA500"><p class="pezda">Price</p></div><div class="micro-content"><p class="big-pezda">{{ order.price }}$</p></div></div>
+                </div>
+                <div class = "bottom-card-body">
+                    <div class="mini-card" style="width: 100%; margin-top: 13px"><div class="micro-card" style="background-color: #4F76AF "><p class="pezda">Description</p></div><div class="micro-content"><p class="big-pezda">{{ order.description }}</p></div></div>
+                </div>
+                </div>
         </div>
- {% endblock %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

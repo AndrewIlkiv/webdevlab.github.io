@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
 body {font-family: "Open Sans"}
@@ -28,7 +29,7 @@ body {font-family: "Open Sans"}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{% url 'stuff' %}">Our photographers</a>
-            <a class="dropdown-item" href="{% url 'order' %}">Order your photoshoot</a>
+            <a class="dropdown-item" href="{% url 'order_list' %}">Order your photoshoot</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{% url 'contact' %}">Contact us!</a>
           </div>
@@ -38,6 +39,7 @@ body {font-family: "Open Sans"}
         </li>
       </ul>
         <a class="nav-link navbar-brand" href="{% url 'register' %}">Sign up</a>
+        <a class="nav-link navbar-brand" href="{% url 'login' %}">Login</a>
     </div>
   </nav>  
 {% block mainpage %}
@@ -80,7 +82,7 @@ body {font-family: "Open Sans"}
         </div>
 
         <div class="w3-justify">
-          <img src="../static/css/img/girl-in-bush.jpg" style="width:100%" class="w3-padding-16">
+          <img src="../static/css/img/popug.jpg" style="width:100%" class="w3-padding-16">
           <p> “How do we start taking pictures of people, and stop taking pictures of poses?”<strong>– Justin and Mary Marantz</strong>
             </p>
           </div>
@@ -93,7 +95,7 @@ body {font-family: "Open Sans"}
         </div>
 
         <div class="w3-justify">
-          <img src="../static/css/img/paris-girl.jpg" style="width:100%" class="w3-padding-16">
+          <img src="../static/css/img/castle.jpg" style="width:100%" class="w3-padding-16">
           <p><strong>And he is good</strong> Wherever the center of the light source is, you want that to be a little bit above the center of the couple’s eyes – something magical happens when you do this </p>
          </div>
       </div>
@@ -132,10 +134,11 @@ body {font-family: "Open Sans"}
 <footer class="w3-container w3-dark fixed-bottom" style="padding:5px">
   <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 </footer>
-        {% endblock %}
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="{% static 'js/atelier.js' %}"></script>
 
 </body>
 </html>
