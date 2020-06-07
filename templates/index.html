@@ -9,9 +9,15 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 <style>
-h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
-body {font-family: "Open Sans"}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Oswald"
+}
+body {
+    font-family: "Open Sans"
+}
 </style>
 <body class="w3-light-grey">
 
@@ -37,9 +43,18 @@ body {font-family: "Open Sans"}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'about' %}">About us</a>
         </li>
+          {% block profile %}
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+        </li>
+          {% endblock %}
       </ul>
-        <a class="nav-link navbar-brand" href="{% url 'register' %}">Sign up</a>
-        <a class="nav-link navbar-brand" href="{% url 'login' %}">Login</a>
+{#        <a class="nav-link navbar-brand" href="{% url 'register' %}">Sign up</a>#}
+{#        <a class="nav-link navbar-brand" href="{% url 'login' %}">Login</a>#}
+        {% block login %}
+        <span style="color: white; margin-right: 5px">Hello, {{ request.user }}</span>
+        <span><a href="{% url 'logout' %}">Logout</a>
+        {% endblock %}
     </div>
   </nav>  
 {% block mainpage %}
